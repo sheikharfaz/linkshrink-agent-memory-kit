@@ -1,0 +1,185 @@
+# module: `.agent/skills`
+
+> GENERATED · generation `465a28e980` · 17 files · 3,532 LOC · 157 symbols
+
+Languages: `python`×11
+
+## Files
+
+- `.agent/skills/codebase-memory/SKILL.md` — markdown, 0 LOC, 0 symbols  _(not parsed: markdown)_
+- `.agent/skills/codebase-memory/index.py` — python, 951 LOC, 22 symbols
+- `.agent/skills/codebase-memory/query.py` — python, 453 LOC, 27 symbols
+- `.agent/skills/dev-recap/SKILL.md` — markdown, 0 LOC, 0 symbols  _(not parsed: markdown)_
+- `.agent/skills/dev-recap/recap_log.py` — python, 443 LOC, 31 symbols
+- `.agent/skills/session-memory/SKILL.md` — markdown, 0 LOC, 0 symbols  _(not parsed: markdown)_
+- `.agent/skills/session-memory/hooks/_common.py` — python, 55 LOC, 5 symbols
+- `.agent/skills/session-memory/hooks/session_start.py` — python, 86 LOC, 2 symbols
+- `.agent/skills/session-memory/hooks/stop.py` — python, 90 LOC, 2 symbols
+- `.agent/skills/session-memory/hooks/user_prompt_submit.py` — python, 66 LOC, 1 symbols
+- `.agent/skills/session-memory/memory.py` — python, 405 LOC, 24 symbols
+- `.agent/skills/session-memory/wire_hooks.py` — python, 61 LOC, 1 symbols
+- `.agent/skills/spec-first/SKILL.md` — markdown, 0 LOC, 0 symbols  _(not parsed: markdown)_
+- `.agent/skills/spec-first/spec_first.py` — python, 306 LOC, 14 symbols
+- `.agent/skills/tool-provisioning/SKILL.md` — markdown, 0 LOC, 0 symbols  _(not parsed: markdown)_
+- `.agent/skills/tool-provisioning/registry.json` — json, 0 LOC, 0 symbols  _(not parsed: json)_
+- `.agent/skills/tool-provisioning/toolkit.py` — python, 616 LOC, 28 symbols
+
+## Symbols
+
+- `safe_main` function `.agent/skills/session-memory/hooks/_common.py:49` ←4
+- `append_entry` function `.agent/skills/session-memory/memory.py:119` ←4
+- `search` function `.agent/skills/tool-provisioning/toolkit.py:174` ←4
+- `files` function `.agent/skills/codebase-memory/query.py:71` ←3
+- `add` function `.agent/skills/codebase-memory/query.py:415` ←3
+- `session_memory_disabled` function `.agent/skills/session-memory/hooks/_common.py:16` ←3
+- `read_hook_input` function `.agent/skills/session-memory/hooks/_common.py:23` ←3
+- `symbols` function `.agent/skills/codebase-memory/query.py:68` ←2
+- `edges` function `.agent/skills/codebase-memory/query.py:74` ←2
+- `snippet` function `.agent/skills/session-memory/hooks/_common.py:44` ←2
+- `recall` function `.agent/skills/session-memory/memory.py:192` ←2
+- `recent` function `.agent/skills/session-memory/memory.py:226` ←2
+- `prune` function `.agent/skills/session-memory/memory.py:270` ←2
+- `is_opaque` function `.agent/skills/codebase-memory/index.py:151` ←1
+- `lang_of` function `.agent/skills/codebase-memory/index.py:156` ←1
+- `load_agentignore` function `.agent/skills/codebase-memory/index.py:166` ←1
+- `matches_any` function `.agent/skills/codebase-memory/index.py:178` ←1
+- `git_files` function `.agent/skills/codebase-memory/index.py:188` ←1
+- `_under_agent_memory` function `.agent/skills/codebase-memory/index.py:199` ←1
+- `walk_files` function `.agent/skills/codebase-memory/index.py:203` ←1
+- `keep_dir` function `.agent/skills/codebase-memory/index.py:208` ←1
+- `discover` function `.agent/skills/codebase-memory/index.py:225` ←1
+- `_rx` function `.agent/skills/codebase-memory/index.py:255` ←1
+- `read_text` function `.agent/skills/codebase-memory/index.py:408` ←1
+- `extract` function `.agent/skills/codebase-memory/index.py:428` ←1
+- `build_module_map` function `.agent/skills/codebase-memory/index.py:472` ←1
+- `module_of` function `.agent/skills/codebase-memory/index.py:485` ←1
+- `slug` function `.agent/skills/codebase-memory/index.py:506` ←1
+- `sha1_of` function `.agent/skills/codebase-memory/index.py:514` ←1
+- `build` function `.agent/skills/codebase-memory/index.py:525` ←1
+- `append_drift_snapshot` function `.agent/skills/codebase-memory/index.py:681` ←1
+- `write_jsonl` function `.agent/skills/codebase-memory/index.py:728` ←1
+- `render` function `.agent/skills/codebase-memory/index.py:737` ←1
+- `find_graph` function `.agent/skills/codebase-memory/query.py:34` ←1
+- `stream` function `.agent/skills/codebase-memory/query.py:49` ←1
+- `syms_named` function `.agent/skills/codebase-memory/query.py:79` ←1
+- `banner` function `.agent/skills/codebase-memory/query.py:100` ←1
+- `top_deltas` function `.agent/skills/codebase-memory/query.py:360` ←1
+- `learning_dir` function `.agent/skills/dev-recap/recap_log.py:64` ←1
+- `recap_path` function `.agent/skills/dev-recap/recap_log.py:68` ←1
+- `quiz_path` function `.agent/skills/dev-recap/recap_log.py:72` ←1
+- `profile_path` function `.agent/skills/dev-recap/recap_log.py:76` ←1
+- `_append` function `.agent/skills/dev-recap/recap_log.py:80` ←1
+- `_load` function `.agent/skills/dev-recap/recap_log.py:86` ←1
+- `_now` function `.agent/skills/dev-recap/recap_log.py:100` ←1
+- `record_recap` function `.agent/skills/dev-recap/recap_log.py:106` ←1
+- `_mirror_to_session_memory` function `.agent/skills/dev-recap/recap_log.py:117` ←1
+- `record_quiz` function `.agent/skills/dev-recap/recap_log.py:135` ←1
+- `topic_strength` function `.agent/skills/dev-recap/recap_log.py:144` ←1
+- `due_for_review` function `.agent/skills/dev-recap/recap_log.py:161` ←1
+- `set_familiarity` function `.agent/skills/dev-recap/recap_log.py:180` ←1
+- `current_familiarity` function `.agent/skills/dev-recap/recap_log.py:194` ←1
+- `_run` function `.agent/skills/dev-recap/recap_log.py:201` ←1
+- `_is_git_repo` function `.agent/skills/dev-recap/recap_log.py:209` ←1
+- `_changed_files` function `.agent/skills/dev-recap/recap_log.py:214` ←1
+- `_added_lines_with_markers` function `.agent/skills/dev-recap/recap_log.py:226` ←1
+- `_looks_like_test_touched` function `.agent/skills/dev-recap/recap_log.py:242` ←1
+- `_codebase_memory_indexed` function `.agent/skills/dev-recap/recap_log.py:248` ←1
+- `gaps` function `.agent/skills/dev-recap/recap_log.py:263` ←1
+- `_familiarity_nudge` function `.agent/skills/session-memory/hooks/session_start.py:36` ←1
+- `extract_last_assistant_text` function `.agent/skills/session-memory/hooks/stop.py:37` ←1
+- `memory_dir` function `.agent/skills/session-memory/memory.py:77` ←1
+- `entries_path` function `.agent/skills/session-memory/memory.py:81` ←1
+- `redact` function `.agent/skills/session-memory/memory.py:85` ←1
+- `load_entries` function `.agent/skills/session-memory/memory.py:91` ←1
+- `rewrite_entries` function `.agent/skills/session-memory/memory.py:106` ←1
+- `bump_weight` function `.agent/skills/session-memory/memory.py:142` ←1
+- `_tf_weight` function `.agent/skills/session-memory/memory.py:163` ←1
+- `_build_idf` function `.agent/skills/session-memory/memory.py:167` ←1
+- `_vector` function `.agent/skills/session-memory/memory.py:174` ←1
+- `_cosine` function `.agent/skills/session-memory/memory.py:186` ←1
+- `_snippet` function `.agent/skills/session-memory/memory.py:287` ←1
+- `task_dir` function `.agent/skills/spec-first/spec_first.py:112` ←1
+- `scaffold` function `.agent/skills/spec-first/spec_first.py:118` ←1
+- `_strip_comments` function `.agent/skills/spec-first/spec_first.py:142` ←1
+- `_section` function `.agent/skills/spec-first/spec_first.py:146` ←1
+- `_checkbox_lines` function `.agent/skills/spec-first/spec_first.py:157` ←1
+- `_bullet_lines` function `.agent/skills/spec-first/spec_first.py:163` ←1
+- `check` function `.agent/skills/spec-first/spec_first.py:169` ←1
+- `list_tasks` function `.agent/skills/spec-first/spec_first.py:196` ←1
+- `glyph` function `.agent/skills/spec-first/spec_first.py:270` ←1
+- `_load_json` function `.agent/skills/tool-provisioning/toolkit.py:76` ←1
+- `org_policy_path` function `.agent/skills/tool-provisioning/toolkit.py:83` ←1
+- `load_org_policy` function `.agent/skills/tool-provisioning/toolkit.py:87` ←1
+- `apply_org_policy` function `.agent/skills/tool-provisioning/toolkit.py:112` ←1
+- `load_registry` function `.agent/skills/tool-provisioning/toolkit.py:150` ←1
+- `load_effective_registry` function `.agent/skills/tool-provisioning/toolkit.py:160` ←1
+- `find_entry` function `.agent/skills/tool-provisioning/toolkit.py:166` ←1
+- `check_installed` function `.agent/skills/tool-provisioning/toolkit.py:188` ←1
+- `pip_show_info` function `.agent/skills/tool-provisioning/toolkit.py:211` ←1
+- `ledger_path` function `.agent/skills/tool-provisioning/toolkit.py:231` ←1
+- `ledger_append` function `.agent/skills/tool-provisioning/toolkit.py:235` ←1
+- `ledger_events` function `.agent/skills/tool-provisioning/toolkit.py:242` ←1
+- `open_installs` function `.agent/skills/tool-provisioning/toolkit.py:257` ←1
+- `run_cmd` function `.agent/skills/tool-provisioning/toolkit.py:274` ←1
+- `_probe_tcp` function `.agent/skills/tool-provisioning/toolkit.py:284` ←1
+- `_fmt_installed` function `.agent/skills/tool-provisioning/toolkit.py:294` ←1
+- `cmd_uninstall` function `.agent/skills/tool-provisioning/toolkit.py:392` ←1
+- `verify` function `.agent/skills/codebase-memory/index.py:899`
+- `main` function `.agent/skills/codebase-memory/index.py:932`
+- `Graph` class `.agent/skills/codebase-memory/query.py:59`
+- `__init__` function `.agent/skills/codebase-memory/query.py:60`
+- `emit` function `.agent/skills/codebase-memory/query.py:87`
+- `cmd_arch` function `.agent/skills/codebase-memory/query.py:110`
+- `cmd_def` function `.agent/skills/codebase-memory/query.py:132`
+- `cmd_callers` function `.agent/skills/codebase-memory/query.py:143`
+- `cmd_callees` function `.agent/skills/codebase-memory/query.py:159`
+- `cmd_search` function `.agent/skills/codebase-memory/query.py:165`
+- `cmd_file` function `.agent/skills/codebase-memory/query.py:180`
+- `cmd_importers` function `.agent/skills/codebase-memory/query.py:201`
+- `cmd_routes` function `.agent/skills/codebase-memory/query.py:210`
+- `cmd_impact` function `.agent/skills/codebase-memory/query.py:219`
+- `cmd_changed` function `.agent/skills/codebase-memory/query.py:242`
+- `cmd_coverage` function `.agent/skills/codebase-memory/query.py:268`
+- `cmd_orphans` function `.agent/skills/codebase-memory/query.py:288`
+- `cmd_stats` function `.agent/skills/codebase-memory/query.py:310`
+- `cmd_drift` function `.agent/skills/codebase-memory/query.py:314`
+- `main` function `.agent/skills/codebase-memory/query.py:394`
+- `find_repo_root` function `.agent/skills/dev-recap/recap_log.py:52`
+- `stats` function `.agent/skills/dev-recap/recap_log.py:300`
+- `cmd_record_recap` function `.agent/skills/dev-recap/recap_log.py:314`
+- `cmd_record_quiz` function `.agent/skills/dev-recap/recap_log.py:324`
+- `cmd_due` function `.agent/skills/dev-recap/recap_log.py:330`
+- `cmd_gaps` function `.agent/skills/dev-recap/recap_log.py:344`
+- `cmd_set_familiarity` function `.agent/skills/dev-recap/recap_log.py:368`
+- `cmd_get_familiarity` function `.agent/skills/dev-recap/recap_log.py:374`
+- `cmd_stats` function `.agent/skills/dev-recap/recap_log.py:387`
+- `main` function `.agent/skills/dev-recap/recap_log.py:393`
+- `emit` function `.agent/skills/session-memory/hooks/_common.py:31`
+- `run` function `.agent/skills/session-memory/hooks/session_start.py:53`
+- `run` function `.agent/skills/session-memory/hooks/stop.py:70`
+- `run` function `.agent/skills/session-memory/hooks/user_prompt_submit.py:35`
+- `find_repo_root` function `.agent/skills/session-memory/memory.py:65`
+- `stats` function `.agent/skills/session-memory/memory.py:254`
+- `cmd_record` function `.agent/skills/session-memory/memory.py:292`
+- `cmd_recall` function `.agent/skills/session-memory/memory.py:301`
+- `cmd_recent` function `.agent/skills/session-memory/memory.py:314`
+- `cmd_stats` function `.agent/skills/session-memory/memory.py:328`
+- `cmd_prune` function `.agent/skills/session-memory/memory.py:334`
+- `cmd_verify` function `.agent/skills/session-memory/memory.py:340`
+- `main` function `.agent/skills/session-memory/memory.py:362`
+- `main` function `.agent/skills/session-memory/wire_hooks.py:25`
+- `find_repo_root` function `.agent/skills/spec-first/spec_first.py:100`
+- `cmd_scaffold` function `.agent/skills/spec-first/spec_first.py:217`
+- `cmd_check` function `.agent/skills/spec-first/spec_first.py:228`
+- `cmd_list` function `.agent/skills/spec-first/spec_first.py:260`
+- `main` function `.agent/skills/spec-first/spec_first.py:278`
+- `find_repo_root` function `.agent/skills/tool-provisioning/toolkit.py:62`
+- `cmd_search` function `.agent/skills/tool-provisioning/toolkit.py:298`
+- `cmd_plan` function `.agent/skills/tool-provisioning/toolkit.py:314`
+- `cmd_install` function `.agent/skills/tool-provisioning/toolkit.py:347`
+- `cmd_list_installed` function `.agent/skills/tool-provisioning/toolkit.py:423`
+- `cmd_sweep` function `.agent/skills/tool-provisioning/toolkit.py:433`
+- `cmd_export_audit` function `.agent/skills/tool-provisioning/toolkit.py:446`
+- `cmd_sync_org_registry` function `.agent/skills/tool-provisioning/toolkit.py:467`
+- `cmd_doctor` function `.agent/skills/tool-provisioning/toolkit.py:508`
+- `main` function `.agent/skills/tool-provisioning/toolkit.py:567`

@@ -1,0 +1,24 @@
+{
+  "ambiguous_calls": 33,
+  "built_at": 1789046774,
+  "call_edges": 127,
+  "calls_mode": "on",
+  "discovery": "git",
+  "edges": 379,
+  "elapsed_s": 0.04,
+  "files_parsed": 17,
+  "files_total": 33,
+  "generated_at": "2026-09-10T13:26:14Z",
+  "generation": "465a28e980",
+  "indexer_sha": "e18e78f338c3",
+  "loc_by_lang": {
+    "python": 3660
+  },
+  "root_name": "linkshrink-agent-memory-kit",
+  "schema": 3,
+  "skipped": {
+    "non-code": 14,
+    "unknown-type": 2
+  },
+  "symbols": 170
+}

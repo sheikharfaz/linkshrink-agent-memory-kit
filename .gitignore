@@ -1,0 +1,12 @@
+linkshrink.db
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+
+# session-memory / dev-recap local data stays local, per agent-memory-kit's
+# own privacy stance -- everything else under .agent/memory/ (the shared
+# codebase map, the tool-provisioning ledger, drift history) is committed
+# deliberately, as evidence for this comparison.
+.agent/memory/session/
+.agent/memory/learning/
