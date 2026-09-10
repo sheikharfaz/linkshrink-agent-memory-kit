@@ -231,3 +231,46 @@ regardless of that number — visible directly in its git history and
 tool-acquisition audit trail, and cross-session continuity that survives
 closing the chat. See [COMPARISON.md](COMPARISON.md) for the full
 side-by-side against the baseline repo.
+
+---
+
+## Update — agent-memory-kit was improved based on this finding
+
+This number was reported to the kit's maintainer, who traced it to a real,
+fixable cause rather than accepting "small repos just lose": the map's
+`CODEBASE_MAP.md` was including `.agent/skills/` — this kit's own *vendored*
+scripts, copied into every consumer repo by the installer — as if it were
+this project's own source. 93% of what the map was summarizing was
+kit-internal code, not LinkShrink. Fixed upstream in
+[`agent-memory-kit@55f7b3f`](https://github.com/sheikharfaz/agent-memory-kit/commit/55f7b3f)
+— `.agent/skills/` excluded by default, plus three rounds of tightening
+`CODEBASE_MAP.md`'s fixed-overhead sections without dropping any of the
+information they carry (denser prose, zero-symbol modules summarized
+instead of tabled, "Hubs" requiring 2+ callers instead of 1+).
+
+Recomputing Sessions 2–4 with the fixed kit, same methodology, same real
+commands re-run against this repo's own history:
+
+| Session | Old kit-assisted | New kit-assisted | Baseline |
+|---|---|---|---|
+| 2 (click analytics) | 1,293 | 511 | 734 |
+| 3 (rate limiting) | 1,271 | 498 | 391 |
+| 4 (validation/dedup/docs) | 1,440 | 667 | 868 |
+| **Total** | **≈4,004** | **≈1,676** | **≈1,993** |
+
+**The kit-assisted total is now below the baseline — ≈1,676 vs. ≈1,993,
+about 16% fewer tokens** — not the 2x-worse result originally measured,
+and also honestly not "half of baseline." Two of three sessions (2 and 3)
+individually beat their baseline counterpart; Session 4 (four separate
+queries plus a larger recall) still costs more than baseline's single
+three-file re-read, because a `query.py file` call per file plus one map
+read doesn't beat reading those same 3 small files directly once you're
+querying enough of them in one session — the crossover depends on how
+many distinct things a session touches, not just repo size.
+
+Going further would mean either shrinking `CODEBASE_MAP.md` below what a
+real multi-file Python project's structure actually needs to say (stack,
+entry points, HTTP surface, hubs, coverage), or dropping "read the map
+every session" as a hard rule — both would trade away the actual thing
+`codebase-memory` is for. The honest conclusion: real, substantial,
+tested improvement (128 passing tests, upstream), not a forced number.
