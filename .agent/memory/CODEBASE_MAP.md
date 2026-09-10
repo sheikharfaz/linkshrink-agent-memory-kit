@@ -1,7 +1,7 @@
 # CODEBASE MAP — linkshrink-agent-memory-kit
 
 > GENERATED FILE. Do not edit by hand; rerun the codebase-memory skill.
-> generation `465a28e980` · 2026-09-10T13:26:14Z · 33 files (17 parsed) · 170 symbols · 379 edges
+> generation `64a25da1ac` · 2026-09-10T13:30:51Z · 36 files (18 parsed) · 177 symbols · 393 edges
 
 ## How to use this file
 
@@ -14,15 +14,16 @@ Absence of a symbol here is **not** proof it does not exist — see Coverage.
 
 ## Stack
 
-- `python` — 3,660 LOC (100%)
+- `python` — 3,736 LOC (100%)
 
 ## Likely entry points
 
 - `.agent/skills/codebase-memory/index.py`
 - `app/main.py`
 
-## HTTP surface (2 detected)
+## HTTP surface (3 detected)
 
+- `GET /links/{code}/stats` → `app/main.py`
 - `GET /{code}` → `app/main.py`
 - `POST /links` → `app/main.py`
 
@@ -30,10 +31,10 @@ Absence of a symbol here is **not** proof it does not exist — see Coverage.
 
 | module | files | LOC | symbols | shard |
 |---|---:|---:|---:|---|
-| `.agent/skills` | 17 | 3,532 | 157 | [`agent__skills.md`](modules/agent__skills.md) |
-| `app` | 4 | 97 | 10 | [`app.md`](modules/app.md) |
-| `tests` | 2 | 31 | 3 | [`tests.md`](modules/tests.md) |
-| `.agent/work` | 2 | 0 | 0 | [`agent__work.md`](modules/agent__work.md) |
+| `.agent/skills` | 17 | 3,536 | 157 | [`agent__skills.md`](modules/agent__skills.md) |
+| `app` | 4 | 125 | 13 | [`app.md`](modules/app.md) |
+| `tests` | 3 | 75 | 7 | [`tests.md`](modules/tests.md) |
+| `.agent/work` | 4 | 0 | 0 | [`agent__work.md`](modules/agent__work.md) |
 | `.claude` | 1 | 0 | 0 | [`claude.md`](modules/claude.md) |
 | `.github` | 1 | 0 | 0 | [`github.md`](modules/github.md) |
 | `(root)` | 6 | 0 | 0 | [`-root-.md`](modules/-root-.md) |
@@ -68,12 +69,12 @@ Absence of a symbol here is **not** proof it does not exist — see Coverage.
 
 ## Most-imported dependencies
 
-`sys` (11), `os` (11), `json` (9), `argparse` (6), `time` (4), `subprocess` (4), `re` (4), `memory` (4), `_common` (3)
+`sys` (11), `os` (11), `json` (9), `argparse` (6), `time` (4), `subprocess` (4), `re` (4), `memory` (4), `app` (3), `_common` (3)
 
 ## Coverage and limits
 
-- Discovery: `git`. Parsed 17 of 33 files.
-- Skipped: non-code=14, unknown-type=2
-- Call edges: `on`. 127 resolved, 33 call sites left unresolved because the name was ambiguous across files.
+- Discovery: `git`. Parsed 18 of 36 files.
+- Skipped: non-code=16, unknown-type=2
+- Call edges: `on`. 129 resolved, 36 call sites left unresolved because the name was ambiguous across files.
 - Symbols come from language-aware pattern matching, not a full compiler front end. Dynamic dispatch, macros, reflection, code generation and string-built calls are invisible to it.
 - **A clean result means "no recorded gap", never "proven complete".** Before any claim that something does not exist, confirm with a direct search over the relevant paths and say which paths you covered.

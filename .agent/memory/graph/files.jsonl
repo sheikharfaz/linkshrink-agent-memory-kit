@@ -2,7 +2,7 @@
 {"bytes":39468,"lang":"python","loc":951,"mod":".agent/skills","p":".agent/skills/codebase-memory/index.py","parsed":true,"sha":"e18e78f338c3","syms":22,"test":false}
 {"bytes":17682,"lang":"python","loc":453,"mod":".agent/skills","p":".agent/skills/codebase-memory/query.py","parsed":true,"sha":"caf5ad03ee2e","syms":27,"test":false}
 {"bytes":7097,"lang":"markdown","mod":".agent/skills","p":".agent/skills/dev-recap/SKILL.md","parsed":false,"sha":"ddc4fc372660"}
-{"bytes":16547,"lang":"python","loc":443,"mod":".agent/skills","p":".agent/skills/dev-recap/recap_log.py","parsed":true,"sha":"789dc3c4c199","syms":31,"test":false}
+{"bytes":16836,"lang":"python","loc":447,"mod":".agent/skills","p":".agent/skills/dev-recap/recap_log.py","parsed":true,"sha":"cfb8c9033f67","syms":31,"test":false}
 {"bytes":6161,"lang":"markdown","mod":".agent/skills","p":".agent/skills/session-memory/SKILL.md","parsed":false,"sha":"8e58683a2762"}
 {"bytes":1392,"lang":"python","loc":55,"mod":".agent/skills","p":".agent/skills/session-memory/hooks/_common.py","parsed":true,"sha":"abe16acfada0","syms":5,"test":false}
 {"bytes":3287,"lang":"python","loc":86,"mod":".agent/skills","p":".agent/skills/session-memory/hooks/session_start.py","parsed":true,"sha":"746b48c164e3","syms":2,"test":false}
@@ -15,6 +15,8 @@
 {"bytes":8993,"lang":"markdown","mod":".agent/skills","p":".agent/skills/tool-provisioning/SKILL.md","parsed":false,"sha":"0a9473e4f08e"}
 {"bytes":4910,"lang":"json","mod":".agent/skills","p":".agent/skills/tool-provisioning/registry.json","parsed":false,"sha":"da11c2e15096"}
 {"bytes":22968,"lang":"python","loc":616,"mod":".agent/skills","p":".agent/skills/tool-provisioning/toolkit.py","parsed":true,"sha":"eeeaa8b0458c","syms":28,"test":false}
+{"bytes":1089,"lang":"markdown","mod":".agent/work","p":".agent/work/click-analytics/PRD.md","parsed":false,"sha":"88f6805ed66f"}
+{"bytes":1958,"lang":"markdown","mod":".agent/work","p":".agent/work/click-analytics/TRD.md","parsed":false,"sha":"bd55828cc113"}
 {"bytes":1340,"lang":"markdown","mod":".agent/work","p":".agent/work/core-shorten-redirect/PRD.md","parsed":false,"sha":"344a46c2a773"}
 {"bytes":1665,"lang":"markdown","mod":".agent/work","p":".agent/work/core-shorten-redirect/TRD.md","parsed":false,"sha":"3271fa7a0573"}
 {"bytes":654,"lang":"json","mod":".claude","p":".claude/settings.json","parsed":false,"sha":"38d0f8e3a8c7"}
@@ -22,12 +24,13 @@
 {"bytes":375,"lang":"other","mod":"(root)","p":".gitignore","parsed":false,"sha":"1d4a158aa09e"}
 {"bytes":16969,"lang":"markdown","mod":"(root)","p":"AGENTS.md","parsed":false,"sha":"48be75ee9574"}
 {"bytes":7411,"lang":"markdown","mod":"(root)","p":"SECURITY.md","parsed":false,"sha":"f19fb0a11edb"}
-{"bytes":2848,"lang":"markdown","mod":"(root)","p":"SESSION_LOG.md","parsed":false,"sha":"c827ab10a956"}
+{"bytes":5215,"lang":"markdown","mod":"(root)","p":"SESSION_LOG.md","parsed":false,"sha":"6adc9c3077ae"}
 {"bytes":8946,"lang":"markdown","mod":"(root)","p":"SETUP.md","parsed":false,"sha":"7649cf35e854"}
 {"bytes":0,"lang":"python","loc":1,"mod":"app","p":"app/__init__.py","parsed":true,"sha":"da39a3ee5e6b","syms":0,"test":false}
-{"bytes":1104,"lang":"python","loc":45,"mod":"app","p":"app/main.py","parsed":true,"sha":"6d8f466f3b0b","syms":5,"test":false}
+{"bytes":1562,"lang":"python","loc":62,"mod":"app","p":"app/main.py","parsed":true,"sha":"e92491c5c8ca","syms":7,"test":false}
 {"bytes":163,"lang":"python","loc":9,"mod":"app","p":"app/shortcode.py","parsed":true,"sha":"617526abd814","syms":1,"test":false}
-{"bytes":1027,"lang":"python","loc":42,"mod":"app","p":"app/storage.py","parsed":true,"sha":"40ede944ebe4","syms":4,"test":false}
+{"bytes":1393,"lang":"python","loc":53,"mod":"app","p":"app/storage.py","parsed":true,"sha":"06ac1282d8f2","syms":5,"test":false}
 {"bytes":39,"lang":"other","mod":"(root)","p":"requirements.txt","parsed":false,"sha":"ddcea54764cf"}
 {"bytes":0,"lang":"python","loc":1,"mod":"tests","p":"tests/__init__.py","parsed":true,"sha":"da39a3ee5e6b","syms":0,"test":true}
 {"bytes":803,"lang":"python","loc":30,"mod":"tests","p":"tests/test_core.py","parsed":true,"sha":"c1193f604d77","syms":3,"test":true}
+{"bytes":1257,"lang":"python","loc":44,"mod":"tests","p":"tests/test_stats.py","parsed":true,"sha":"7492165e59f2","syms":4,"test":true}

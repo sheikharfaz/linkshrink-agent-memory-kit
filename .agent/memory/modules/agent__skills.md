@@ -1,6 +1,6 @@
 # module: `.agent/skills`
 
-> GENERATED · generation `465a28e980` · 17 files · 3,532 LOC · 157 symbols
+> GENERATED · generation `64a25da1ac` · 17 files · 3,536 LOC · 157 symbols
 
 Languages: `python`×11
 
@@ -10,7 +10,7 @@ Languages: `python`×11
 - `.agent/skills/codebase-memory/index.py` — python, 951 LOC, 22 symbols
 - `.agent/skills/codebase-memory/query.py` — python, 453 LOC, 27 symbols
 - `.agent/skills/dev-recap/SKILL.md` — markdown, 0 LOC, 0 symbols  _(not parsed: markdown)_
-- `.agent/skills/dev-recap/recap_log.py` — python, 443 LOC, 31 symbols
+- `.agent/skills/dev-recap/recap_log.py` — python, 447 LOC, 31 symbols
 - `.agent/skills/session-memory/SKILL.md` — markdown, 0 LOC, 0 symbols  _(not parsed: markdown)_
 - `.agent/skills/session-memory/hooks/_common.py` — python, 55 LOC, 5 symbols
 - `.agent/skills/session-memory/hooks/session_start.py` — python, 86 LOC, 2 symbols
@@ -84,7 +84,7 @@ Languages: `python`×11
 - `_added_lines_with_markers` function `.agent/skills/dev-recap/recap_log.py:226` ←1
 - `_looks_like_test_touched` function `.agent/skills/dev-recap/recap_log.py:242` ←1
 - `_codebase_memory_indexed` function `.agent/skills/dev-recap/recap_log.py:248` ←1
-- `gaps` function `.agent/skills/dev-recap/recap_log.py:263` ←1
+- `gaps` function `.agent/skills/dev-recap/recap_log.py:267` ←1
 - `_familiarity_nudge` function `.agent/skills/session-memory/hooks/session_start.py:36` ←1
 - `extract_last_assistant_text` function `.agent/skills/session-memory/hooks/stop.py:37` ←1
 - `memory_dir` function `.agent/skills/session-memory/memory.py:77` ←1
@@ -145,15 +145,15 @@ Languages: `python`×11
 - `cmd_drift` function `.agent/skills/codebase-memory/query.py:314`
 - `main` function `.agent/skills/codebase-memory/query.py:394`
 - `find_repo_root` function `.agent/skills/dev-recap/recap_log.py:52`
-- `stats` function `.agent/skills/dev-recap/recap_log.py:300`
-- `cmd_record_recap` function `.agent/skills/dev-recap/recap_log.py:314`
-- `cmd_record_quiz` function `.agent/skills/dev-recap/recap_log.py:324`
-- `cmd_due` function `.agent/skills/dev-recap/recap_log.py:330`
-- `cmd_gaps` function `.agent/skills/dev-recap/recap_log.py:344`
-- `cmd_set_familiarity` function `.agent/skills/dev-recap/recap_log.py:368`
-- `cmd_get_familiarity` function `.agent/skills/dev-recap/recap_log.py:374`
-- `cmd_stats` function `.agent/skills/dev-recap/recap_log.py:387`
-- `main` function `.agent/skills/dev-recap/recap_log.py:393`
+- `stats` function `.agent/skills/dev-recap/recap_log.py:304`
+- `cmd_record_recap` function `.agent/skills/dev-recap/recap_log.py:318`
+- `cmd_record_quiz` function `.agent/skills/dev-recap/recap_log.py:328`
+- `cmd_due` function `.agent/skills/dev-recap/recap_log.py:334`
+- `cmd_gaps` function `.agent/skills/dev-recap/recap_log.py:348`
+- `cmd_set_familiarity` function `.agent/skills/dev-recap/recap_log.py:372`
+- `cmd_get_familiarity` function `.agent/skills/dev-recap/recap_log.py:378`
+- `cmd_stats` function `.agent/skills/dev-recap/recap_log.py:391`
+- `main` function `.agent/skills/dev-recap/recap_log.py:397`
 - `emit` function `.agent/skills/session-memory/hooks/_common.py:31`
 - `run` function `.agent/skills/session-memory/hooks/session_start.py:53`
 - `run` function `.agent/skills/session-memory/hooks/stop.py:70`

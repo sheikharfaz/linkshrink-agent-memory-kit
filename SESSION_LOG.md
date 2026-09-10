@@ -50,3 +50,56 @@ had a `- None — ...` bullet. `spec_first.py check` counted that as an
 bullet that says none" from "an actual open item." Leaving the section
 empty is the correct way to say "no open questions"; fixed in this repo's
 PRD, noted here and in the upstream kit's follow-up list.
+
+---
+
+## Session 2 — Click analytics
+
+**Simulated as:** a new session (`--exclude-session sess2` against the
+existing entries). Instead of re-reading files, recovered context via
+`session-memory` recall and `codebase-memory` queries.
+
+**Kit tooling used:**
+```
+memory.py recent --exclude-session sess2 --limit 5
+query.py file app/storage.py
+query.py file app/main.py
+```
+plus `spec_first.py scaffold click-analytics`, and after implementing:
+`dev-recap/recap_log.py gaps`, `record-recap`, `record-quiz`.
+
+**Context read this session:**
+
+| Source | Chars | ≈ Tokens |
+|---|---|---|
+| `memory.py recent` (session-memory recall) | 178 | 45 |
+| `query.py file app/storage.py` | 228 | 57 |
+| `query.py file app/main.py` | 360 | 90 |
+| `CODEBASE_MAP.md` (read once, session start) | 4,404 | 1,101 |
+| **Total** | **5,170** | **≈ 1,293** |
+
+**An honest result, not the one you'd expect:** this is *more* than the
+baseline repo's Session 2 (≈734 tokens, from reading 2 files directly). At
+this project's tiny scale, `CODEBASE_MAP.md` describing every file costs
+more than just reading the 2 files that actually mattered — the map's
+fixed overhead doesn't pay for itself until the codebase is bigger than
+"5 source files." See `agent-memory-kit`'s own benchmark suite
+(`benchmarks/`, run against `django/django` and `psf/requests`) for where
+that crossover actually happens — this repo is deliberately too small to
+show it, and that's a real, useful data point in its own right, not a
+result to hide.
+
+**A second real bug, found using the tool for real:** `dev-recap/recap_log.py
+gaps` reported `app/main.py` and `app/storage.py` as "not in the codebase
+index" — immediately after rebuilding that index, which very clearly did
+include them. Traced it to `_codebase_memory_indexed()` checking the wrong
+JSON field name (`"path"` instead of `codebase-memory`'s real short key,
+`"p"`), so the check could never match anything. Fixed upstream in
+`agent-memory-kit` (with 3 regression tests), and the fix is already
+copied into this repo's `.agent/skills/dev-recap/recap_log.py` — see the
+`gaps` output later in this session for the corrected result.
+
+**Built:** identical application changes to the baseline repo's Session 2.
+
+**Verification:** `python3 -m pytest tests/ -v` → 5 passed. `spec_first.py
+check click-analytics` → 3/3 acceptance criteria checked.

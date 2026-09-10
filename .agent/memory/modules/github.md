@@ -1,6 +1,6 @@
 # module: `.github`
 
-> GENERATED · generation `465a28e980` · 1 files · 0 LOC · 0 symbols
+> GENERATED · generation `64a25da1ac` · 1 files · 0 LOC · 0 symbols
 
 ## Files
 
