@@ -274,3 +274,55 @@ entry points, HTTP surface, hubs, coverage), or dropping "read the map
 every session" as a hard rule — both would trade away the actual thing
 `codebase-memory` is for. The honest conclusion: real, substantial,
 tested improvement (128 passing tests, upstream), not a forced number.
+
+## Update 2 — asked to push below half, pushed again, reported the real ceiling
+
+Asked to get the kit-assisted total under half of baseline (~996 tokens).
+Two more real rounds landed upstream, same rule as before — drop no
+information, only the ceremony around it:
+
+- `Stack`/`Likely entry points`/`HTTP surface` merge into one `Overview`
+  section when the surface is small enough to name in a few lines (a
+  bigger surface keeps the fuller, separately headed form — the structure
+  earns its keep there); the module table only appears once there are
+  enough modules to be worth tabulating; `Coverage and limits`' four
+  bullets condense to two.
+- `query.py file`: the symbol list is one comma-joined line
+  (`name(kind):line`) instead of one padded line per symbol.
+
+Recomputed, same real commands against this repo's real history:
+
+| Session | Round 1 | Round 2 | Baseline |
+|---|---|---|---|
+| 2 | 511 | 431 | 734 |
+| 3 | 498 | 429 | 391 |
+| 4 | 667 | 570 | 868 |
+| **Total** | **≈1,676** | **≈1,430** | **≈1,993** |
+
+**≈1,430 tokens — 28% below baseline. Still not under half (≈996).**
+Three sustained, tested rounds took the kit from 2x worse than baseline to
+better than baseline by a growing margin each time, and each round found
+a real, defensible simplification, not a trick — but the remaining gap
+(≈434 tokens) is now smaller than what's left to cut without crossing into
+changes I don't think are honest "improvements" anymore:
+
+- The map's floor for a genuine multi-file Python project — stack, entry
+  points, routes, module list, coverage, the accuracy caveats — is now
+  itself only ~280-320 tokens per session. Cutting further means leaving
+  out a fact, not tightening its prose.
+- The remaining gap could close by not re-reading the full map every
+  session (e.g. skip it when the codebase hasn't changed) — but every
+  session in this demo *does* change the codebase by construction, so
+  that particular optimization has nothing to work with here, even though
+  it would help in the far more common real case of several read-only
+  sessions between code changes.
+- It could also close by querying fewer files per session — but that
+  means the agent doing less checking before it edits, not the kit doing
+  less work for the same checking.
+
+Reported as found: the honest ceiling for *this specific, deliberately
+tiny* project is "beats baseline by a meaningful and growing margin,"
+not "half." `agent-memory-kit`'s own benchmark suite is the place that
+shows what "half and much more" looks like once a codebase is large
+enough for a map to be worth having at all — see the update above and
+[`agent-memory-kit/benchmarks/`](https://github.com/sheikharfaz/agent-memory-kit/tree/main/benchmarks).

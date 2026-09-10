@@ -1,6 +1,6 @@
 {
   "ambiguous_calls": 4,
-  "built_at": 1789048572,
+  "built_at": 1789050807,
   "call_edges": 9,
   "calls_mode": "on",
   "discovery": "git",
@@ -8,9 +8,9 @@
   "elapsed_s": 0.03,
   "files_parsed": 9,
   "files_total": 27,
-  "generated_at": "2026-09-10T13:56:12Z",
-  "generation": "a158563756",
-  "indexer_sha": "c86f2620d543",
+  "generated_at": "2026-09-10T14:33:27Z",
+  "generation": "190b1267f8",
+  "indexer_sha": "95404a98a93d",
   "loc_by_lang": {
     "python": 275
   },

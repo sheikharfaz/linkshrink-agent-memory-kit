@@ -1,33 +1,22 @@
 # CODEBASE MAP — linkshrink-agent-memory-kit
 
 > GENERATED FILE. Do not edit by hand; rerun the codebase-memory skill.
-> generation `a158563756` · 2026-09-10T13:56:12Z · 27 files (9 parsed) · 27 symbols · 69 edges
+> generation `190b1267f8` · 2026-09-10T14:33:27Z · 27 files (9 parsed) · 27 symbols · 69 edges
 
 ## How to use this file
 
 Map → module shard (`modules/<slug>.md`) → `query.py` verb → a source line range, in that order. Absence here is **not** proof of absence — see Coverage.
 
-## Stack
+## Overview
 
-- `python` — 275 LOC (100%)
-
-## Likely entry points
-
-- `app/main.py`
-
-## HTTP surface (3 detected)
-
-- `GET /links/{code}/stats` → `app/main.py`
-- `GET /{code}` → `app/main.py`
-- `POST /links` → `app/main.py`
+- Stack: `python` 275 LOC (100%)
+- Entry point(s): `app/main.py`
+- Routes: `GET /links/{code}/stats`→`app/main.py`; `GET /{code}`→`app/main.py`; `POST /links`→`app/main.py`
 
 ## Modules (6) — largest first
 
-| module | files | LOC | symbols | shard |
-|---|---:|---:|---:|---|
-| `app` | 4 | 144 | 14 | [`app.md`](modules/app.md) |
-| `tests` | 5 | 131 | 13 | [`tests.md`](modules/tests.md) |
-
+- `app`: 4f/144L/14s → [`app.md`](modules/app.md)
+- `tests`: 5f/131L/13s → [`tests.md`](modules/tests.md)
 _+4 module(s) with no parsed code (shard in `modules/` has the file list)._
 
 ## Most-imported dependencies
@@ -36,7 +25,5 @@ _+4 module(s) with no parsed code (shard in `modules/` has the file list)._
 
 ## Coverage and limits
 
-- Discovery: `git`. Parsed 9 of 27 files (skipped non-code=16, unknown-type=2).
-- Call edges (`on`): 9 resolved, 4 unresolved (ambiguous name).
-- Pattern-matched, not compiler-accurate: dynamic dispatch, macros, reflection, codegen, and string-built calls are invisible to it.
-- **Clean ≠ proof of absence.** Confirm with a direct search over the relevant paths before any "there is no X" claim.
+- git discovery, 9/27 files parsed, skipped non-code=16, unknown-type=2; calls=`on`, 9 resolved, 4 ambiguous.
+- Pattern-matched, not compiler-accurate (dynamic dispatch, macros, reflection, codegen, string-built calls are invisible). **Clean ≠ proof of absence** — confirm with a direct search before any "there is no X" claim.

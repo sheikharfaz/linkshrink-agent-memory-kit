@@ -1,6 +1,6 @@
 # module: `.claude`
 
-> GENERATED · generation `a158563756` · 1 files · 0 LOC · 0 symbols
+> GENERATED · generation `190b1267f8` · 1 files · 0 LOC · 0 symbols
 
 ## Files
 
