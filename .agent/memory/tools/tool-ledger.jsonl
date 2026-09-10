@@ -1,0 +1,1 @@
+{"event": "install", "install_cmd": ["pip", "install", "--user", "slowapi"], "kind": "pip", "name": "rate-limit-fastapi", "sbom": {"home_page": "https://github.com/laurents/slowapi", "license": "MIT", "name": "slowapi", "version": "0.1.10"}, "session": "sess3", "ts": "2026-09-10T13:31:40Z", "uninstall_cmd": ["pip", "uninstall", "-y", "slowapi"]}

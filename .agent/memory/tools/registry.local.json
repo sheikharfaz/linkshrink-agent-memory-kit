@@ -1,0 +1,12 @@
+[
+  {
+    "name": "rate-limit-fastapi",
+    "kind": "pip",
+    "package": "slowapi",
+    "match": ["rate limit", "rate limiting", "throttle", "slowapi", "429"],
+    "check": {"type": "python_import", "module": "slowapi"},
+    "install_cmd": ["pip", "install", "--user", "slowapi"],
+    "uninstall_cmd": ["pip", "uninstall", "-y", "slowapi"],
+    "risk": "Installs 'slowapi' (FastAPI/Starlette rate limiting) and its dependency 'limits' from PyPI into the user site-packages. Project-local addition -- not in the kit's shipped registry."
+  }
+]

@@ -1,24 +1,24 @@
 {
-  "ambiguous_calls": 36,
-  "built_at": 1789047051,
+  "ambiguous_calls": 37,
+  "built_at": 1789047239,
   "call_edges": 129,
   "calls_mode": "on",
   "discovery": "git",
-  "edges": 393,
+  "edges": 403,
   "elapsed_s": 0.04,
-  "files_parsed": 18,
-  "files_total": 36,
-  "generated_at": "2026-09-10T13:30:51Z",
-  "generation": "64a25da1ac",
+  "files_parsed": 19,
+  "files_total": 39,
+  "generated_at": "2026-09-10T13:33:59Z",
+  "generation": "806149ea6f",
   "indexer_sha": "e18e78f338c3",
   "loc_by_lang": {
-    "python": 3736
+    "python": 3773
   },
   "root_name": "linkshrink-agent-memory-kit",
   "schema": 3,
   "skipped": {
-    "non-code": 16,
+    "non-code": 18,
     "unknown-type": 2
   },
-  "symbols": 177
+  "symbols": 180
 }

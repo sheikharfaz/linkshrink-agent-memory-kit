@@ -103,3 +103,53 @@ copied into this repo's `.agent/skills/dev-recap/recap_log.py` — see the
 
 **Verification:** `python3 -m pytest tests/ -v` → 5 passed. `spec_first.py
 check click-analytics` → 3/3 acceptance criteria checked.
+
+---
+
+## Session 3 — Rate limiting (new dependency, via tool-provisioning)
+
+**Simulated as:** a new session. Recovered context the same way as
+Session 2; the new part is acquiring a dependency that isn't in the kit's
+shipped registry.
+
+**Context read this session:**
+
+| Source | Chars | ≈ Tokens |
+|---|---|---|
+| `memory.py recent` (session-memory recall) | 178 | 44 |
+| `query.py file app/main.py` | 445 | 111 |
+| `CODEBASE_MAP.md` (read once, session start) | 4,462 | 1,115 |
+| **Total** | **5,085** | **≈ 1,271** |
+
+Baseline's Session 3 re-read only `app/main.py` in full (1,562 chars,
+≈391 tokens) — cheaper than this session, for the same reason as
+Session 2: the map's fixed cost doesn't pay for itself at this scale. The
+gap would flip with a bigger codebase; see `agent-memory-kit`'s own
+benchmark suite for where.
+
+**Dependency acquisition (the part this session is actually about):**
+`slowapi` isn't in the kit's shipped registry, so a project-local entry
+was added first (`.agent/memory/tools/registry.local.json`), then the real
+flow:
+
+```
+toolkit.py search "rate limit"               # found the new local entry
+toolkit.py plan rate-limit-fastapi           # printed install/uninstall + risk, ran nothing
+                                              # <- approved in chat here, same as a human would
+toolkit.py install rate-limit-fastapi --session sess3
+                                              # ran pip install, logged to tool-ledger.jsonl
+```
+
+**Deliberately left open in the ledger:** `slowapi` becomes a permanent
+runtime dependency (`requirements.txt`), not a one-off task tool —
+`toolkit.py list-installed` still shows it after this session, on purpose.
+Sweeping it would break the app. This is the honest boundary of
+tool-provisioning's uninstall discipline: it's for task-scoped tools, not
+things the shipped product now depends on. `requirements.txt` is the
+record of *that* it's a dependency; the ledger is the record of *when and
+how* it was approved and added.
+
+**Built:** identical application changes to the baseline repo's Session 3.
+
+**Verification:** `python3 -m pytest tests/ -v` → 7 passed. `spec_first.py
+check rate-limiting` → 3/3 acceptance criteria checked.
