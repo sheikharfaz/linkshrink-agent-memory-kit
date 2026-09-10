@@ -153,3 +153,81 @@ how* it was approved and added.
 
 **Verification:** `python3 -m pytest tests/ -v` → 7 passed. `spec_first.py
 check rate-limiting` → 3/3 acceptance criteria checked.
+
+---
+
+## Session 4 — Validation, dedup, docs
+
+**Simulated as:** a new session. `memory.py recent` (one-per-session
+dedup) only surfaced the latest note, since every session in this demo
+ran under the CLI's default `cli` session id rather than a distinct id per
+session — a real Claude Code session gets a genuinely unique id
+automatically, so this is an artifact of how this demo was driven by
+hand, not of the tool. Used `memory.py recall` with a topical query
+instead, which isn't affected by that and surfaced 2 of the 3 prior
+sessions' notes by similarity.
+
+**Context read this session:**
+
+| Source | Chars | ≈ Tokens |
+|---|---|---|
+| `memory.py recall "what features have been built..."` | 358 | 89 |
+| `query.py file app/main.py` | 484 | 121 |
+| `query.py file app/storage.py` | 261 | 65 |
+| `query.py file app/shortcode.py` | 140 | 35 |
+| `CODEBASE_MAP.md` (read once, session start) | 4,520 | 1,130 |
+| **Total** | **5,763** | **≈ 1,440** |
+
+Baseline's Session 4 re-read 3 files in full for 3,470 chars (≈868
+tokens) — again cheaper here, again because of the map's fixed cost at
+this project's small scale (see Sessions 2–3's notes on the same pattern).
+
+**Built:** identical application changes to the baseline repo's Session 4
+(`get_link_by_url`, dedup check in `shorten()`, `tests/test_validation.py`,
+this README).
+
+**Verification:** `python3 -m pytest tests/ -v` → 9 passed. `spec_first.py
+check validation-dedup-docs` → 3/3 acceptance criteria checked.
+
+**A methodology note, for completeness:** no session in this repo wrote a
+separate `research.md` (the `AGENTS.md` §5 "map what exists" artifact) —
+`codebase-memory` queries served that role directly each time, which is a
+reasonable substitution for a project this size but wouldn't necessarily
+hold at a scale where research.md's free-form synthesis earns its keep.
+`spec_first.py list` reflects this honestly: every session shows a PRD and
+TRD, none shows research.md.
+
+---
+
+## Totals across all 4 sessions
+
+| | |
+|---|---|
+| Context read/recalled via kit tooling (Sessions 2–4) | **≈ 4,004 tokens** (1,293 + 1,271 + 1,440) |
+| New dependencies added | 1 (`slowapi`) — proposed, approved, installed, ledgered |
+| PRD/TRD artifacts produced | 4 (one pair per session) — [`.agent/work/`](.agent/work/) |
+| dev-recap entries produced | 4 (kept local, per the kit's privacy stance) |
+| Final test count | 9, all passing |
+| Final app code | 4 files, 140 lines (`app/`) — byte-for-byte identical to `linkshrink-baseline`'s (`diff` confirms it), on purpose: this comparison is about process, not code quality |
+| Real bugs in the kit found while building this | 1 ([fixed upstream](https://github.com/sheikharfaz/agent-memory-kit) — `dev-recap`'s `gaps` checked the wrong JSON field against the codebase index) |
+
+**The honest headline number: this repo used *more* tokens than the
+baseline (≈4,004 vs. ≈1,993) for context/recall across Sessions 2–4.**
+That's not a typo, and it's not buried here. At this project's scale — 4–5
+source files — `CODEBASE_MAP.md`'s fixed cost (read once per session,
+~1,100–1,200 tokens each time) outweighs what re-reading 1–3 small files
+directly would have cost. The map is built to summarize a whole codebase;
+a codebase this small barely needs summarizing.
+
+That is *not* the result `agent-memory-kit`'s own benchmark suite shows
+against real, larger repositories — `django/django` (2,979 parsed files)
+comes back at a 35.6x *reduction*, not increase — see
+[`agent-memory-kit/benchmarks/`](https://github.com/sheikharfaz/agent-memory-kit/tree/main/benchmarks).
+Read together, the two results say the same honest thing: the map's fixed
+cost has to amortize over enough code to be worth paying, and this project
+was deliberately too small to clear that bar. What this repo *does* show
+regardless of that number — visible directly in its git history and
+`.agent/work/`, not asserted — is a PRD and TRD per feature, a real
+tool-acquisition audit trail, and cross-session continuity that survives
+closing the chat. See [COMPARISON.md](COMPARISON.md) for the full
+side-by-side against the baseline repo.

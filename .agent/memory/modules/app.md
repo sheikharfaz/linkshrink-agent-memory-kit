@@ -1,6 +1,6 @@
 # module: `app`
 
-> GENERATED · generation `806149ea6f` · 4 files · 133 LOC · 13 symbols
+> GENERATED · generation `34c6a4dc43` · 4 files · 144 LOC · 14 symbols
 
 Languages: `python`×4
 
@@ -13,9 +13,9 @@ Languages: `python`×4
 ## Files
 
 - `app/__init__.py` — python, 1 LOC, 0 symbols
-- `app/main.py` — python, 70 LOC, 7 symbols
+- `app/main.py` — python, 75 LOC, 7 symbols
 - `app/shortcode.py` — python, 9 LOC, 1 symbols
-- `app/storage.py` — python, 53 LOC, 5 symbols
+- `app/storage.py` — python, 59 LOC, 6 symbols
 
 ## Symbols
 
@@ -26,9 +26,10 @@ Languages: `python`×4
 - `init_db` function `app/storage.py:17` ←1
 - `insert_link` function `app/storage.py:31` ←1
 - `get_link` function `app/storage.py:40` ←1
-- `record_click` function `app/storage.py:46` ←1
+- `get_link_by_url` function `app/storage.py:46` ←1
+- `record_click` function `app/storage.py:52` ←1
 - `lifespan` function `app/main.py:16`
 - `ShortenRequest` class `app/main.py:28`
 - `shorten` function `app/main.py:47`
-- `stats` function `app/main.py:56`
-- `redirect` function `app/main.py:64`
+- `stats` function `app/main.py:61`
+- `redirect` function `app/main.py:69`

@@ -1,6 +1,6 @@
 # module: `.agent/skills`
 
-> GENERATED · generation `806149ea6f` · 17 files · 3,536 LOC · 157 symbols
+> GENERATED · generation `34c6a4dc43` · 17 files · 3,536 LOC · 157 symbols
 
 Languages: `python`×11
 

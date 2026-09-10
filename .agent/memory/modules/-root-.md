@@ -1,11 +1,12 @@
 # module: `(root)`
 
-> GENERATED · generation `806149ea6f` · 6 files · 0 LOC · 0 symbols
+> GENERATED · generation `34c6a4dc43` · 7 files · 0 LOC · 0 symbols
 
 ## Files
 
 - `.gitignore` — other, 0 LOC, 0 symbols  _(not parsed: other)_
 - `AGENTS.md` — markdown, 0 LOC, 0 symbols  _(not parsed: markdown)_
+- `README.md` — markdown, 0 LOC, 0 symbols  _(not parsed: markdown)_
 - `SECURITY.md` — markdown, 0 LOC, 0 symbols  _(not parsed: markdown)_
 - `SESSION_LOG.md` — markdown, 0 LOC, 0 symbols  _(not parsed: markdown)_
 - `SETUP.md` — markdown, 0 LOC, 0 symbols  _(not parsed: markdown)_

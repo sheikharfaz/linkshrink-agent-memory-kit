@@ -1,8 +1,8 @@
 # module: `tests`
 
-> GENERATED · generation `806149ea6f` · 4 files · 104 LOC · 10 symbols
+> GENERATED · generation `34c6a4dc43` · 5 files · 131 LOC · 13 symbols
 
-Languages: `python`×4
+Languages: `python`×5
 
 ## Files
 
@@ -10,6 +10,7 @@ Languages: `python`×4
 - `tests/test_core.py` — python, 30 LOC, 3 symbols
 - `tests/test_rate_limit.py` — python, 29 LOC, 3 symbols
 - `tests/test_stats.py` — python, 44 LOC, 4 symbols
+- `tests/test_validation.py` — python, 27 LOC, 3 symbols
 
 ## Symbols
 
@@ -23,3 +24,6 @@ Languages: `python`×4
 - `test_stats_start_at_zero_clicks` function `tests/test_stats.py:14`
 - `test_redirect_increments_click_count` function `tests/test_stats.py:26`
 - `test_stats_for_unknown_code_is_404` function `tests/test_stats.py:40`
+- `temp_db` function `tests/test_validation.py:9`
+- `test_invalid_url_is_rejected` function `tests/test_validation.py:16`
+- `test_shortening_the_same_url_twice_returns_the_same_code` function `tests/test_validation.py:22`

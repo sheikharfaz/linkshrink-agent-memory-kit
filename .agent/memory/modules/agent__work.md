@@ -1,6 +1,6 @@
 # module: `.agent/work`
 
-> GENERATED · generation `806149ea6f` · 6 files · 0 LOC · 0 symbols
+> GENERATED · generation `34c6a4dc43` · 8 files · 0 LOC · 0 symbols
 
 ## Files
 
@@ -10,6 +10,8 @@
 - `.agent/work/core-shorten-redirect/TRD.md` — markdown, 0 LOC, 0 symbols  _(not parsed: markdown)_
 - `.agent/work/rate-limiting/PRD.md` — markdown, 0 LOC, 0 symbols  _(not parsed: markdown)_
 - `.agent/work/rate-limiting/TRD.md` — markdown, 0 LOC, 0 symbols  _(not parsed: markdown)_
+- `.agent/work/validation-dedup-docs/PRD.md` — markdown, 0 LOC, 0 symbols  _(not parsed: markdown)_
+- `.agent/work/validation-dedup-docs/TRD.md` — markdown, 0 LOC, 0 symbols  _(not parsed: markdown)_
 
 ## Symbols
 
